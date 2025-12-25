@@ -1,0 +1,41 @@
+{
+    "family": "fsl-challenge-app",
+    "containerDefinitions": [
+        {
+            "cpu": 1,
+            "essential": true,
+            "image": "604842892483.dkr.ecr.ap-south-1.amazonaws.com/fsl-challenge-app@sha256:2c84129efc58cdc6811b62b0b4a627753bf3054b63bd2acbabade5da5b0f1bcc",
+            "logConfiguration": {
+                "logDriver": "awslogs",
+                "options": {
+                    "awslogs-group": "/ecs/fsl-challenge-app",
+                    "awslogs-create-group": "true",
+                    "awslogs-region": "ap-south-1",
+                    "awslogs-stream-prefix": "ecs"
+                }
+            },
+            "mountPoints": [],
+            "name": "fsl-challenge-app",
+            "portMappings": [
+                {
+                    "appProtocol": "http",
+                    "containerPort": 80,
+                    "hostPort": 80,
+                    "name": "fsl-challenge-app-80-tcp",
+                    "protocol": "tcp"
+                }
+            ],
+        }
+    ],
+    "executionRoleArn": "arn:aws:iam::604842892483:role/ecsTaskExecutionRole",
+    "networkMode": "awsvpc",
+    "requiresCompatibilities": [
+        "FARGATE"
+    ]
+    "cpu": "1024",
+    "memory": "3072",
+    "runtimePlatform": {
+        "cpuArchitecture": "X86_64",
+        "operatingSystemFamily": "LINUX"
+    }
+}
