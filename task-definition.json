@@ -24,14 +24,14 @@
                     "name": "fsl-challenge-app-80-tcp",
                     "protocol": "tcp"
                 }
-            ],
+            ]
         }
     ],
     "executionRoleArn": "arn:aws:iam::604842892483:role/ecsTaskExecutionRole",
     "networkMode": "awsvpc",
     "requiresCompatibilities": [
         "FARGATE"
-    ]
+    ],
     "cpu": "1024",
     "memory": "3072",
     "runtimePlatform": {
